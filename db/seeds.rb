@@ -12,12 +12,12 @@ first_name  = ["John", "Jake", "Melanie", "Jane", "Timothy", "Alfred", "Jessica"
 last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
 
 5.times do
- getuser = User.create!(
+ getuser = User.new(
   first_name: first_name.sample,
   last_name: last_name.sample,
-  email: "#{first_name.sample}#{last_name.sample}@loo4you.com",
   password:"123456"
   )
+ getuser.email = "#{getuser.first_name}.#{getuser.last_name}@loo4you.com"
 Toilet.create!(
 title: "#{adj.sample} toilet in the heart of #{location.sample}",
  description: "This toilet is shaped like an #{alphabet.sample}. The extension extends into a patio reaching until the end of that side of the house.
@@ -29,6 +29,6 @@ The second floor is smaller than the first, which allowed for several balconies 
 )
 
 end
-puts "You have #{User.count} toilets, you lucky bastard!"
+puts "You have #{User.count} users, you lucky bastard!"
 puts "You have #{Toilet.count} toilets, you lucky bastard!"
 
