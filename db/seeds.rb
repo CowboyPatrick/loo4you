@@ -1,7 +1,34 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Booking.destroy_all
+puts "Seeding some shit"
+puts "destroying toilets"
+Toilet.destroy_all
+puts "destroying users"
+User.destroy_all
+alphabet = ('a'..'z').to_a
+adj = ["high tech", "clean","elegant", "beautiful","spacious"]
+location = ["shibuya","meguro","shinjuku", "gotanda", "mejiro", "ikebukuro", "shimokitaza"]
+category = ["old school", "new school", "squatty potty", "stall", "butt warming"]
+first_name  = ["John", "Jake", "Melanie", "Jane", "Timothy", "Alfred", "Jessica"]
+last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
+
+5.times do
+ getuser = User.create!(
+  first_name: first_name.sample,
+  last_name: last_name.sample,
+  email: "#{first_name.sample}#{last_name.sample}@loo4you.com",
+  password:"123456"
+  )
+Toilet.create!(
+title: "#{adj.sample} toilet in the heart of #{location.sample}",
+ description: "This toilet is shaped like an #{alphabet.sample}. The extension extends into a patio reaching until the end of that side of the house.
+The second floor is smaller than the first, which allowed for several balconies on the sides of the house. This floor has a slightly different style than the floor below.",
+ category: category.sample,
+ price: "¥#{rand(500..200)}",
+ address: "#{location.sample}",
+ user:  getuser
+)
+
+end
+puts "You have #{User.count} toilets, you lucky bastard!"
+puts "You have #{Toilet.count} toilets, you lucky bastard!"
+
