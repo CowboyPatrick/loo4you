@@ -18,6 +18,7 @@ last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
   password:"123456"
   )
  getuser.email = "#{getuser.first_name}.#{getuser.last_name}@loo4you.com"
+ getuser.save
 Toilet.create!(
 title: "#{adj.sample} toilet in the heart of #{location.sample}",
  description: "This toilet is shaped like an #{alphabet.sample}. The extension extends into a patio reaching until the end of that side of the house.
