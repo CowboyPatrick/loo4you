@@ -1,3 +1,6 @@
-<%@toilets.each do |toilet| %>
-  <%=toilet.title %>
-  <%end%>
+<div class="container ml-0 my-5">
+  <h1>Toilets around ___</h1>
+</div>
+<% @toilets.each do |toilet| %>
+  <%= render 'shared/index-card', toilet:toilet %>
+<% end %>
