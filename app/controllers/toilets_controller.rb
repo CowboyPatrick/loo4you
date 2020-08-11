@@ -7,6 +7,8 @@ class ToiletsController < ApplicationController
 
   def show
     @toilet = Toilet.find(params[:id])
+    @booking = Booking.new
     authorize @toilet
   end
+
 end

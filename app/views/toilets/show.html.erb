@@ -1,5 +1,7 @@
 <!-- show.html.erb -->
-<div class="container">
-  <h1><%= @toilet.title  %></h1>
-  <h2><%= @toilet.description %></h2>
-</div>
+
+<h1><%= @toilet.title  %></h1>
+<h2><%= @toilet.description %></h2>
+<%= simple_form_for [@toilet, @booking] do |f| %>
+  <%= f.button :submit, "FLUSH" %>
+<% end %>
