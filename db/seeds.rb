@@ -17,15 +17,15 @@ last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
     last_name: last_name.sample,
     password:"123456"
   )
- getuser.email = "#{getuser.first_name}.#{getuser.last_name}@loo4you.com"
- getuser.save
+
+  getuser.email = "#{getuser.first_name}.#{getuser.last_name}@loo4you.com"
+  getuser.save!
 Toilet.create!(
 title: "#{adj.sample} toilet in the heart of #{location.sample}",
  description: "This toilet is shaped like an #{alphabet.sample}. The extension extends into a patio reaching until the end of that side of the house.
 =======
   getuser.email = "#{getuser.first_name}.#{getuser.last_name}@loo4you.com"
   getuser.save!
-
   Toilet.create!(
     title: "#{adj.sample} toilet in the heart of #{location.sample}",
     description: "This toilet is shaped like an #{alphabet.sample}. The extension extends into a patio reaching until the end of that side of the house.
