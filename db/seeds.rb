@@ -7,10 +7,10 @@ User.destroy_all
 alphabet = ('a'..'z').to_a
 adj = ["high tech", "clean","grand", "beautiful","spacious"]
 location = ["shibuya","meguro","shinjuku", "gotanda", "mejiro", "ikebukuro", "shimokitazawa"]
-category = ["washiki", "outhouse", "washlet", "American Standard", "Luxury"]
+category = ["washiki", "outhouse", "washlet", "American Standard", "Luxury", "THRONE"]
 first_name  = ["John", "Jake", "Melanie", "Jane", "Timothy", "Alfred", "Jessica"]
 last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
-story = ["You will enjoy a foot rub while releiving yourself.", "A crowd will cheer you on as your do your business!", "On summer nights you can see fireworks while making some of your own.", "Take care of you necessities in a zen like state."]
+story = ["You will enjoy a foot rub while releiving yourself.", "A crowd will cheer you on as your do your business!", "On summer nights you can see fireworks while making some of your own.", "Take care of you necessities in a zen like state.", "Don't let the smell of pee throw you off, it will get the job done."]
 
 25.times do
   getuser = User.new(
