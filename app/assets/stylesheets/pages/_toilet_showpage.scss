@@ -1,3 +1,7 @@
+.toilet-image {
+  flex: 40%;
+}
+
 .toilet-image img {
   width: 100%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -12,6 +16,7 @@
 
 .toilet-description {
   display: flex;
+  flex: 60%;
   flex-direction: column;
   padding-left: 32px;
   h2 {
@@ -22,4 +27,8 @@
 
 .book-button {
 margin-top: 50px;
+}
+
+#show-box {
+  margin-right: 80px;
 }
