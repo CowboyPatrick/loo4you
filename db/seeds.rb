@@ -11,7 +11,7 @@ category = ["washiki", "outhouse", "washlet", "American Standard", "Luxury", "TH
 first_name  = ["John", "Jake", "Melanie", "Jane", "Timothy", "Alfred", "Jessica"]
 last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
 
-story = ["You will enjoy a foot rub while releiving yourself.", "A crowd will cheer you on as you do your business!", "On summer nights you can see fireworks while making some of your own.", "Take care of your necessities in a zen like state."]
+story = ["You will enjoy a foot rub while relieving yourself.", "A crowd will cheer you on as you do your business!", "On summer nights you can see fireworks while making some of your own.", "Take care of your necessities in a zen like state."]
 
 
 25.times do
