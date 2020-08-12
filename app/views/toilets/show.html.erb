@@ -1,7 +1,23 @@
 <!-- show.html.erb -->
-<h1><%= @toilet.title  %></h1>
-<h2><%= @toilet.description %></h2>
-<h2><%= @toilet.price %></h2>
-<%= simple_form_for [@toilet, @booking] do |f| %>
-  <%= f.button :submit, "FLUSH" %>
-<% end %>
+<div class="d-flex justify-content-bewteen my-5 p-4" id="show-box">
+  <div class="toilet-image ml-4">
+    <!-- hard coded the image. change logic once image upload feature is ready. -->
+    <img src="https://images.unsplash.com/photo-1589824783837-6169889fa20f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="">
+  </div>
+  <div class="toilet-description">
+    <row class="title pb-4">
+      <h1><%= @toilet.title  %></h1>
+      <span>
+        <p>Rating: ⭐️⭐️⭐️⭐️</p>
+      </span>
+    </row>
+    <row class="description">
+      <h2><%= @toilet.description %></h2>
+    </row>
+    <div class="book-button">
+      <%= simple_form_for [@toilet, @booking] do |f| %>
+        <%= f.button :submit, "Book an experience 🚽", class: "btn btn-pink" %>
+      <% end %>
+    </div>
+  </div>
+</div>
