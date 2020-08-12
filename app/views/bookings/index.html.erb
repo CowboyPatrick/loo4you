@@ -1,7 +1,22 @@
 <!-- index.html.erb for bookings -->
-<h1>Bookings!</h1>
-<% @bookings.each do |booking| %>
-  <%= booking.user.email %>
-  <%= booking.user.id %>
-  <%= booking.toilet.id %>
-<% end %>
+<div class="container">
+  <h1>Your Toilet Journey</h1>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Time:</th>
+        <th scope="col">Toilet:</th>
+        <th scope="col">Address:</th>
+        <th scope="col">Rating</th>
+      </tr>
+    </thead>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td>9:00</td>
+        <td><%= link_to booking.toilet.title, toilet_path(booking.toilet) %></td>
+        <td><%= booking.toilet.address %></td>
+        <td><%= "⭐️"*4 %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
