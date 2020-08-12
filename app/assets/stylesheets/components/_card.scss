@@ -46,6 +46,21 @@
   }
 }
 
+.card-toilet .card-toilet-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+   .card-toilet-pricing {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  }
+
+}
+
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
