@@ -2,10 +2,10 @@
   <% @toilets.each do |toilet| %>
     <div class="card-category" >
       <%= link_to toilet_path(toilet.id) do %>
-        <div class="card-category" ><%=toilet.title%></div>
+        <%=toilet.title%>
+        <br>
+        <p>⭐️⭐️⭐️⭐️</p>
       <%end%>
     </div>
   <%end%>
 </div>
-
-
