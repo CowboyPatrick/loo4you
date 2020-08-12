@@ -3,9 +3,10 @@
   <div class="card-toilet-infos">
     <div>
       <h2><%= toilet.title %></h2>
-      <p>Toilet description with <strong>relevant info</strong> only.</p>
+      <p>⭐️⭐️⭐️⭐️</p>
+      <!-- <p>Toilet description with <strong>relevant info</strong> only.</p> -->
+      <h2 class="card-toilet-pricing">¥<%= toilet.price.to_i%></h2>
     </div>
-    <h2 class="card-toilet-pricing">¥<%= toilet.price.to_i%></h2>
   </div>
   <%= link_to "", toilet_path(toilet), class: "card-toilet-link" %>
 </div>
