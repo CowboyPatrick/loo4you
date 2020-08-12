@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = @user
     authorize @booking
     if @booking.save
-      redirect_to toilet_path(@toilet), notice: "Successful booking"
+      redirect_to bookings_path, notice: "Successful booking"
     else
       render 'toilets/show'
     end
