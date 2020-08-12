@@ -5,28 +5,29 @@ Toilet.destroy_all
 puts "destroying users"
 User.destroy_all
 alphabet = ('a'..'z').to_a
-adj = ["high tech", "clean","elegant", "beautiful","spacious"]
+adj = ["high tech", "clean","grand", "beautiful","spacious"]
 location = ["shibuya","meguro","shinjuku", "gotanda", "mejiro", "ikebukuro", "shimokitaza"]
-category = ["old school", "new school", "squatty potty", "stall", "butt warming"]
+category = ["washiki", "outhouse", "washlet", "American Standard", "Luxury"]
 first_name  = ["John", "Jake", "Melanie", "Jane", "Timothy", "Alfred", "Jessica"]
 last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
+story = ["You will enjoy a foot rub while releiving yourself.", "A crowd will cheer you on as your do your business!", "On summer nights you can see fireworks while making some of your own.", "Take care of you necessities in a zen like state."]
 
-5.times do
+25.times do
   getuser = User.new(
     first_name: first_name.sample,
     last_name: last_name.sample,
-    password:"123456"
+    password:"123123"
   )
-
-  getuser.email = "#{getuser.first_name}.#{getuser.last_name}@loo4you.com"
+  getuser.email = "#{getuser.first_name}.#{getuser.last_name}#{rand(0..99)}@loo4you.com"
   getuser.save!
+
+  temp_location = location.sample.capitalize
   Toilet.create!(
-    title: "#{adj.sample} toilet in the heart of #{location.sample}",
-    description: "This toilet is shaped like an #{alphabet.sample}. The extension extends into a patio reaching until the end of that side of the house.
-The second floor is smaller than the first, which allowed for several balconies on the sides of the house. This floor has a slightly different style than the floor below.",
+    title: "A #{adj.sample} toilet #{temp_location}",
+    description: "This #{adj.sample} toilet is located somewhere in #{temp_location}. #{story.sample}",
     category: category.sample,
     price: rand(200..5000),
-    address: "#{location.sample}",
+    address: "#{temp_location} #{rand(0..10)}-#{rand(0..999)}",
     user:  getuser
   )
 
