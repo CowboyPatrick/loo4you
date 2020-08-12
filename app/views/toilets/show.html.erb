@@ -16,6 +16,7 @@
     </row>
     <div class="book-button">
       <%= simple_form_for [@toilet, @booking] do |f| %>
+        <%= f.input :date, html5: true %>
         <%= f.button :submit, "Book an experience 🚽", class: "btn btn-pink" %>
       <% end %>
     </div>
