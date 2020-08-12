@@ -6,7 +6,9 @@
   font-weight: lighter;
   opacity: 1;
   transition: opacity 0.3s ease;
-  background:#FD4F79
+  background:#FD4F79;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
 }
 
 .btn-pink:hover {

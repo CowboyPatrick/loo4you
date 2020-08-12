@@ -1,0 +1,25 @@
+.toilet-image img {
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  border: 2px double $pink;
+}
+
+.toilet-description h1 {
+  font-weight: bolder;
+  font-size: 32px;
+}
+
+.toilet-description {
+  display: flex;
+  flex-direction: column;
+  padding-left: 32px;
+  h2 {
+    font-size: 16px;
+    color: rgba(40, 40, 40, 0.8)
+  }
+}
+
+.book-button {
+margin-top: 50px;
+}
