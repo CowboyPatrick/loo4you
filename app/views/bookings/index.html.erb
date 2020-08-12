@@ -15,7 +15,7 @@
         <td>9:00</td>
         <td><%= link_to booking.toilet.title, toilet_path(booking.toilet) %></td>
         <td><%= booking.toilet.address %></td>
-        <td><%= "⭐️"*4 %></td>
+        <td><%= "⭐️"*rand(1..5) %></td>
       </tr>
     <% end %>
   </table>

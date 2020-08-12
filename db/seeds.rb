@@ -6,7 +6,7 @@ puts "destroying users"
 User.destroy_all
 alphabet = ('a'..'z').to_a
 adj = ["high tech", "clean","grand", "beautiful","spacious"]
-location = ["shibuya","meguro","shinjuku", "gotanda", "mejiro", "ikebukuro", "shimokitaza"]
+location = ["shibuya","meguro","shinjuku", "gotanda", "mejiro", "ikebukuro", "shimokitazawa"]
 category = ["washiki", "outhouse", "washlet", "American Standard", "Luxury"]
 first_name  = ["John", "Jake", "Melanie", "Jane", "Timothy", "Alfred", "Jessica"]
 last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
