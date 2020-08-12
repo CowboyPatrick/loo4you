@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :toilets, only:[:index, :show] do
     resource :bookings, only: [:create]
   end
-  resources :bookings, only: [:index, :new, :create]
+  resources :bookings, only: [:index, :create]
 end
