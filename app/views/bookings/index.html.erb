@@ -12,7 +12,7 @@
     </thead>
     <% @bookings.each do |booking| %>
       <tr>
-        <td>9:00</td>
+        <td><%= booking.date&.strftime("%b %e, %l:%M %p") %></td>
         <td><%= link_to booking.toilet.title, toilet_path(booking.toilet) %></td>
         <td><%= booking.toilet.address %></td>
         <td><%= "⭐️"*rand(1..5) %></td>
