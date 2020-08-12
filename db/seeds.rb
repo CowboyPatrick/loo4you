@@ -25,7 +25,7 @@ last_name = ["Alaska", "Robinson", "Johnson", "Kim", "Yamada", "Balona", "Wen"]
     description: "This toilet is shaped like an #{alphabet.sample}. The extension extends into a patio reaching until the end of that side of the house.
 The second floor is smaller than the first, which allowed for several balconies on the sides of the house. This floor has a slightly different style than the floor below.",
     category: category.sample,
-    price: "¥#{rand(500..200)}",
+    price: rand(200..5000),
     address: "#{location.sample}",
     user:  getuser
   )
