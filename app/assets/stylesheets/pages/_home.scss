@@ -1,0 +1,125 @@
+.main-body {
+  h1 {
+    text-align: center;
+    padding: 12px;
+    text-shadow: 2px 1px $pinkbutton;
+    font-size: 49px;
+
+  }
+}
+
+.content-body {
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+
+#container-picks {
+  margin: 40px auto;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 320px;
+  background: $pinkbutton;
+  color: $white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  flex: 30%;
+  height: 100%;
+  object-fit: cover;
+  background: cover;
+}
+
+.card-product h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .mission-description {
+  padding: 16px;
+  flex: 70%;
+}
+
+.card-product2 {
+  overflow: hidden;
+  height: 320px;
+  background: $pink;
+  color: $white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product2 img {
+  flex: 30%;
+  height: 100%;
+  object-fit: cover;
+  background: cover;
+}
+
+.card-product2 h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product2 p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product2 .mission-description2 {
+  padding: 16px;
+  flex: 70%;
+}
+
+.card-product3 {
+  overflow: hidden;
+  height: 320px;
+  background: #5D5F71;
+  color: $white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product3 img {
+  flex: 20%;
+  height: 100%;
+  object-fit: cover;
+  background: cover;
+}
+
+.card-product3 h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product3 p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product3 .mission-description3 {
+  padding: 16px;
+  flex: 60%;
+}
