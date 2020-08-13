@@ -2,7 +2,9 @@
 <div class="d-flex justify-content-bewteen my-5 p-4" id="show-box">
   <div class="toilet-image ml-4">
     <!-- hard coded the image. change logic once image upload feature is ready. -->
-    <%= cl_image_tag @toilet.photo.key, crop: :fill %>
+    <% if @toilet.photo.attached? %>
+      <%= cl_image_tag @toilet.photo.key, crop: :fill %>
+    <% end %>
   </div>
   <div class="toilet-description">
     <row class="title pb-4">
