@@ -1,0 +1,17 @@
+<!-- index.html.erb FOR OWNER::BOOKINGS -->
+<h1>OWNERS BOOKINGS</h1>
+<ul>
+  <% @bookings.each do |booking| %>
+    <li><%= booking.toilet.title %>
+      <%= booking.status %>
+    </li>
+    <%= simple_form_for(booking) do |f| %>
+      <%= f.input :status, input_html: {value: "confirmed"}, as: :hidden %>
+      <%= f.submit "Accept" %>
+    <% end %>
+    <%= simple_form_for(booking) do |f| %>
+      <%= f.input :status, input_html: {value: "rejected"}, as: :hidden %>
+      <%= f.submit "Reject" %>
+    <% end %>
+  <% end %>
+</ul>
