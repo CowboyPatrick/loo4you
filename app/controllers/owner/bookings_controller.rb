@@ -3,6 +3,7 @@ class Owner::BookingsController < ApplicationController
 
   def index
     @bookings = current_user.bookings_as_owner
+    @toilets = current_user.toilets
   end
 
 
