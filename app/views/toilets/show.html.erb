@@ -2,7 +2,7 @@
 <div class="d-flex justify-content-bewteen my-5 p-4" id="show-box">
   <div class="toilet-image ml-4">
     <!-- hard coded the image. change logic once image upload feature is ready. -->
-    <img src="https://images.unsplash.com/photo-1589824783837-6169889fa20f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="">
+    <%= cl_image_tag @toilet.photo.key, crop: :fill %>
   </div>
   <div class="toilet-description">
     <row class="title pb-4">
