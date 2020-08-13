@@ -4,14 +4,16 @@
   <% @bookings.each do |booking| %>
     <li><%= booking.toilet.title %>
       <%= booking.status %>
+      <% if booking.status == "PENDING" %>
+        <%= simple_form_for(booking) do |f| %>
+          <%= f.input :status, input_html: {value: "confirmed"}, as: :hidden %>
+          <%= f.submit "Accept" %>
+        <% end %>
+        <%= simple_form_for(booking) do |f| %>
+          <%= f.input :status, input_html: {value: "rejected"}, as: :hidden %>
+          <%= f.submit "Reject" %>
+        <% end %>
+      <% end %>
     </li>
-    <%= simple_form_for(booking) do |f| %>
-      <%= f.input :status, input_html: {value: "confirmed"}, as: :hidden %>
-      <%= f.submit "Accept" %>
-    <% end %>
-    <%= simple_form_for(booking) do |f| %>
-      <%= f.input :status, input_html: {value: "rejected"}, as: :hidden %>
-      <%= f.submit "Reject" %>
-    <% end %>
   <% end %>
 </ul>
