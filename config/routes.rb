@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :toilets, only:[:index, :show, :new, :create] do
     resource :bookings, only: [:create]
   end
-  resources :bookings, only: [:index, :create]
+  resources :bookings, only: [:index, :edit, :update]
   namespace :owner do
     resources :bookings, only: [:index]
   end
