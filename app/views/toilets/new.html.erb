@@ -1,0 +1,18 @@
+<div class="container my-5 py-4">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h1 style="text-align: center">Add a toilet</h1>
+      <%= simple_form_for(@toilet) do |f| %>
+        <%= f.input :title, placeholder: 'e.g. Luxurious toilet located only 2 minutes from cat street' %>
+        <%= f.input :description, placeholder: 'e.g. This beautiful toilet in the center of Harajuku. Take a quick break from shopping to take care of business!' %>
+        <%= f.input :address, placeholder: 'e.g. 1-23-4, Jingu-mae, Shibuya' %>
+        <%= f.input :price, placeholder: 'e.g. 500', input_html: {step: 100, min: 100} %>
+        <%= f.input :category, collection: ["Japanese Classic (Washiki)", "Outhouse", "Japanese Standard (Bidet + Washlet)", "Japanese Standard Deluxe (++ Heated Seat)", "American Standard", "Luxury (24 CAROT GOLD)", "Urinal"], include_blank: false, include_hidden: false %>
+        <%= f.input :photo, as: :file %>
+        <div class="submit-btn" style="text-align: center;">
+          <%= f.submit class: 'btn btn-pink' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

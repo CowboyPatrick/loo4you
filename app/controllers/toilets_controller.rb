@@ -1,5 +1,5 @@
 class ToiletsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :new, :create]
 
   def index
 
@@ -26,6 +26,23 @@ class ToiletsController < ApplicationController
     @booking = Booking.new
     authorize @toilet
   end
+
+  def new
+    @toilet = Toilet.new
+    authorize @toilet
+  end
+
+  def create
+    @toilet = Toilet.new(toilet_params)
+    if @toilet.save
+      redirect_to toilet_path
+    else
+      render :new
+    end
+    authorize @toilet
+  end
+
+  private
 
   def toilet_params
     params.require(:toilet).permit(:title, :description, :category, :price, :address, :photo)
