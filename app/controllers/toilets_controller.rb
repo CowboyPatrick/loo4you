@@ -8,9 +8,9 @@ class ToiletsController < ApplicationController
         OR toilets.description ILIKE :query \
         OR toilets.address ILIKE :query \
       "
-      @toilets = policy_scope(Toilet.where(sql_query, query: "%#{params[:query]}%"))
+      @toilets = policy_scope(Toilet.where(sql_query, query: "%#{params[:query]}%")).geocoded
     else
-      @toilets = policy_scope(Toilet)
+      @toilets = policy_scope(Toilet).geocoded
     end
 
     @markers = @toilets.map do |toilet|
