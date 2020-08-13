@@ -2,16 +2,15 @@ class ToiletsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :new, :create]
 
   def index
-
     if params[:query].present?
       sql_query = " \
         toilets.title ILIKE :query \
         OR toilets.description ILIKE :query \
         OR toilets.address ILIKE :query \
       "
-      @toilets = policy_scope(Toilet.where(sql_query, query: "%#{params[:query]}%")).geocoded
+      @toilets = policy_scope(Toilet.where(sql_query, query: "%#{params[:query]}%"))
     else
-      @toilets = policy_scope(Toilet).geocoded
+      @toilets = policy_scope(Toilet)
     end
 
     @markers = @toilets.map do |toilet|
@@ -19,6 +18,7 @@ class ToiletsController < ApplicationController
         lat: toilet.latitude,
         lng: toilet.longitude
       }
+    end
   end
 
   def show
@@ -34,8 +34,9 @@ class ToiletsController < ApplicationController
 
   def create
     @toilet = Toilet.new(toilet_params)
+    @toilet.user = current_user
     if @toilet.save
-      redirect_to toilet_path
+      redirect_to toilets_path
     else
       render :new
     end
