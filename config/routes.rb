@@ -7,4 +7,7 @@ Rails.application.routes.draw do
     resource :bookings, only: [:create]
   end
   resources :bookings, only: [:index, :create]
+  namespace :owner do
+    resources :bookings, only: [:index]
+  end
 end
