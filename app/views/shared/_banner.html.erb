@@ -12,9 +12,8 @@
     <div class="search-form-control">
       <%= form_tag toilets_path, method: :get do %>
         <%= text_field_tag :query,params[:query], class: "form-control",placeholder: "Find a loo near you"%>
-        <%= submit_tag"search", class: "btn btn-danger " do%>
-          <i class = "fas fa-search"></i>
-        <% end %>
+        <%= submit_tag "search", class: "hidden" %>
+        <i class = "fas fa-search btn btn-danger" style="line-height: 1.5em;"></i>
       <% end %>
     </div>
   </div>
