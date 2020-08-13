@@ -2,7 +2,14 @@ class ToiletsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @toilets = policy_scope(Toilet)
+    @toilets = policy_scope(Toilet).geocoded
+
+    @markers = @toilets.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def show
