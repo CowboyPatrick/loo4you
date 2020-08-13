@@ -34,6 +34,7 @@ gem 'autoprefixer-rails'
 gem 'cloudinary', '~> 1.12.0'
 gem 'devise'
 gem 'font-awesome-sass'
+gem 'geocoder'
 gem 'pundit'
 gem 'simple_form'
 

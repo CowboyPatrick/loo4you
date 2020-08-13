@@ -8,17 +8,17 @@
     </h2>
   </div>
   <div class="col-md-6 offset-md-3">
-    <form novalidate="novalidate" class="simple_form search" action="/toilets" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" placeholder="Search for a Loo near you!"/>
-        <!-- <button name="button" type="submit" > -->
-        <%=button_tag  style: "color:white", class: "btn btn-danger" do %>
-          <i class="fas fa-search"></i>
+    <!-- <form novalidate="novalidate" class="simple_form search" action="/toilets" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/> -->
+    <div class="search-form-control">
+      <%= form_tag toilets_path, method: :get do %>
+        <%= text_field_tag :query,params[:query], class: "form-control",placeholder: "Find a loo"%>
+        <%= submit_tag"search", class: "btn btn-danger " do%>
+          <i class = "fas fa-search"></i>
         <% end %>
-        <!-- </button> -->
-      </div>
-    </form>
+      <% end %>
+    </div>
   </div>
 </div>
 <!-- Took out of input for first demo -->
 <!-- name="search[query]" -->
+<!-- "fas fa-search" -->

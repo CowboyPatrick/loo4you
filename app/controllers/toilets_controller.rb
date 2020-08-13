@@ -2,7 +2,23 @@ class ToiletsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :new, :create]
 
   def index
-    @toilets = policy_scope(Toilet)
+
+    if params[:query].present?
+      sql_query = " \
+        toilets.title ILIKE :query \
+        OR toilets.description ILIKE :query \
+        OR toilets.address ILIKE :query \
+      "
+      @toilets = policy_scope(Toilet.where(sql_query, query: "%#{params[:query]}%")).geocoded
+    else
+      @toilets = policy_scope(Toilet).geocoded
+    end
+
+    @markers = @toilets.map do |toilet|
+      {
+        lat: toilet.latitude,
+        lng: toilet.longitude
+      }
   end
 
   def show
