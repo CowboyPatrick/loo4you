@@ -17,7 +17,11 @@
     </row>
     <div class="book-button">
       <%= simple_form_for [@toilet, @booking] do |f| %>
-        <%= f.input :date, html5: true %>
+        <%= f.input :date, html5: true,
+                           input_html: {
+                             min: Date.today,
+                             value: DateTime.now.strftime('%Y-%m-%dT%H:%M')
+                           } %>
         <%= f.button :submit, "Book an experience 🚽", class: "btn btn-pink" %>
       <% end %>
     </div>

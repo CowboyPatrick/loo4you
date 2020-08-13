@@ -1,19 +1,40 @@
 <!-- index.html.erb FOR OWNER::BOOKINGS -->
 <h1>OWNERS BOOKINGS</h1>
-<ul>
-  <% @bookings.each do |booking| %>
-    <li><%= booking.toilet.title %>
-      <%= booking.status %>
-      <% if booking.status == "PENDING" %>
-        <%= simple_form_for(booking) do |f| %>
-          <%= f.input :status, input_html: {value: "confirmed"}, as: :hidden %>
-          <%= f.submit "Accept" %>
-        <% end %>
-        <%= simple_form_for(booking) do |f| %>
-          <%= f.input :status, input_html: {value: "rejected"}, as: :hidden %>
-          <%= f.submit "Reject" %>
-        <% end %>
+<div class="continer d-flex">
+  <div>
+    <ul>
+      <% @bookings.each do |booking| %>
+        <li><%= booking.toilet.title %>
+          <%= booking.status %>
+          <% if booking.status == "PENDING" %>
+            <%= simple_form_for(booking) do |f| %>
+              <%= f.input :status, input_html: {value: "confirmed"}, as: :hidden %>
+              <%= f.submit "Accept" %>
+            <% end %>
+            <%= simple_form_for(booking) do |f| %>
+              <%= f.input :status, input_html: {value: "rejected"}, as: :hidden %>
+              <%= f.submit "Reject" %>
+            <% end %>
+          <% end %>
+        </li>
       <% end %>
-    </li>
-  <% end %>
-</ul>
+    </ul>
+  </div>
+  <div>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Toilet:</th>
+          <th scope="col">Address:</th>
+          <th scope="col">Status:</th>
+        </tr>
+      </thead>
+      <tr>
+        <% @toilets.each do |toilet| %>
+          <td><%= toilet.title %></td>
+          <td><%= toilet.address %></td>
+        <% end %>
+      </tr>
+    </table>
+  </div>
+</div>
