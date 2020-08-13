@@ -1,7 +1,6 @@
 <!-- show.html.erb -->
 <div class="d-flex justify-content-bewteen my-5 p-4" id="show-box">
   <div class="toilet-image ml-4">
-    <!-- hard coded the image. change logic once image upload feature is ready. -->
     <% if @toilet.photo.attached? %>
       <%= cl_image_tag @toilet.photo.key, crop: :fill %>
     <% end %>

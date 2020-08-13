@@ -1,0 +1,17 @@
+#map-container {
+background: linear-gradient(135deg, $pink 40%, $pinkbutton);
+padding-top: 20px;
+ h1 {
+  color: $white;
+  text-shadow: 2px 1px $pinkbutton;
+ }
+}
+
+#map {
+  position: sticky;
+  top: 80px;
+  border: 4px outset $white;
+  background: black;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}

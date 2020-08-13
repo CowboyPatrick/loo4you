@@ -8,10 +8,10 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-  <body>
+  <body class="main-body">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <div class="content">
+    <div class="content-body">
       <%= yield %>
     </div>
     <%= render 'shared/footer' %>

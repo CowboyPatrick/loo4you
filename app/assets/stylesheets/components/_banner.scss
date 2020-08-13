@@ -9,12 +9,18 @@
 }
 
 .banner h2 {
-  font-size: 70px;
+  font-size: 90px;
   font-weight: 200;
   margin: 0.4em 0;
-  color: white;
+  color: $black;
   line-height: 2.2;
-  padding-left: 30%;
+  margin-left: 42px;
+  text-shadow: 2px 1px $pinkbutton;
+  text-align: center;
+}
+
+#catch {
+  color: $white;
 }
 
 
