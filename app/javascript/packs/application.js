@@ -28,8 +28,9 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { magicType } from '../components/magic_type'
-import { initSubmitIcon } from '../components/submit_icon'
+import { magicType } from '../components/magic_type';
+import { initSubmitIcon } from '../components/submit_icon';
+import { getPosition } from '../components/emergencyToilet';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -38,4 +39,6 @@ document.addEventListener('turbolinks:load', () => {
   magicType();
   initMapbox();
   initSubmitIcon();
+  getPosition();
+
 });
