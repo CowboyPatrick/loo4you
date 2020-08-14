@@ -23,7 +23,11 @@ class ToiletsController < ApplicationController
   end
 
   def show
-    @toilet = Toilet.find(params[:id])
+    if params[:lat].present?
+      @toilet = Toilet.near([params[:lat], params[:lon]], 6)[0]
+    else
+      @toilet = Toilet.find(params[:id])
+    end
     @booking = Booking.new
     authorize @toilet
   end
