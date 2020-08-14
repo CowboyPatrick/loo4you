@@ -17,6 +17,7 @@ class ToiletsController < ApplicationController
       {
         lat: toilet.latitude,
         lng: toilet.longitude
+
       }
     end
   end

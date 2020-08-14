@@ -20,6 +20,8 @@ const markers = JSON.parse(mapElement.dataset.markers);
   });
 }
 
+
+
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
 
@@ -32,5 +34,7 @@ const initMapbox = () => {
     addMarkers(mapElement, map);
   }
 };
+
+
 // Does this go into the init function
 export { initMapbox };
