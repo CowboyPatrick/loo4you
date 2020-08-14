@@ -1,9 +1,17 @@
-
 <div class="d-flex" id="map-container">
   <div class="container ml-0 my-3 pb-5">
     <br>
-    <h1>Toilets around <%= params[:query] %> </h1>
+    <div class="search-title">
+      <h1>Toilets around <%= params[:query] %> </h1>
+    </div>
     <br>
+    <div class="search-form-control" id="second-searchbar">
+      <%= form_tag toilets_path, method: :get do %>
+        <%= text_field_tag :query,params[:query], class: "form-control"%>
+        <%= submit_tag "search", class: "hidden" %>
+        <i class = "fas fa-search btn btn-danger" style="line-height: 1.5em;"></i>
+      <% end %>
+    </div>
     <% @toilets.each do |toilet| %>
       <%= render 'shared/index-card', toilet:toilet %>
     <% end %>
