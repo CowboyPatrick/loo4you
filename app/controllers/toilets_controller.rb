@@ -17,14 +17,15 @@ class ToiletsController < ApplicationController
       {
         lat: toilet.latitude,
         lng: toilet.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { toilet: toilet })
+        infoWindow: render_to_string(partial: "info_window", locals: { toilet: toilet }),
+        image_url: helpers.image_url('toiletbowl.png')
       }
     end
   end
 
   def show
     if params[:lat].present?
-      @toilet = Toilet.near([params[:lat], params[:lon]], 6)[0]
+      @toilet = Toilet.near([params[:lat], params[:lon]])[0]
     else
       @toilet = Toilet.find(params[:id])
     end

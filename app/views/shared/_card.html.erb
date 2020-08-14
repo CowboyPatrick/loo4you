@@ -1,6 +1,6 @@
 <div class="cards mx-5 px-1">
   <% @toilets.each do |toilet| %>
-    <div class="card-category"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= toilet.photo.attached? ? cl_image_path(toilet.photo.key) : toilet.image_url %>)" >
+    <div class="card-category"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= toilet.photo.attached? ? cl_image_path(toilet.photo.key) : asset_path('logo.png')  %>)" >
       <%= link_to toilet_path(toilet.id) do %>
         <%=toilet.title%>
         <br>
