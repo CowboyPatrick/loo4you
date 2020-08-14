@@ -1,5 +1,5 @@
 <!-- show.html.erb -->
-<div class="d-flex justify-content-bewteen my-5 p-4" id="show-box">
+<div class="d-flex justify-content-bewteen mb-5 p-4" id="show-box">
   <div class="toilet-image ml-4">
     <% if @toilet.photo.attached? %>
       <%= cl_image_tag @toilet.photo.key, crop: :fill %>
