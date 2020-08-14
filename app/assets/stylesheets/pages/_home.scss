@@ -1,11 +1,24 @@
 .main-body {
   h1 {
     text-align: center;
-    padding: 12px;
     text-shadow: 2px 1px $pinkbutton;
     font-size: 49px;
 
   }
+}
+
+.search-title h1 {
+  text-align: left;
+}
+
+#second-searchbar {
+  width: 30%;
+  margin-bottom: 48px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.index-headers {
+  padding-bottom: 24px;
 }
 
 .content-body {

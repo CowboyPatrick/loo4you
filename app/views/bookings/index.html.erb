@@ -1,22 +1,24 @@
 <!-- index.html.erb for bookings -->
-<div class="container">
-  <h1>Your Toilet Journey</h1>
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Time:</th>
-        <th scope="col">Toilet:</th>
-        <th scope="col">Address:</th>
-        <th scope="col">Status:</th>
-      </tr>
-    </thead>
-    <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= booking.date&.strftime("%b %e, %l:%M %p") %></td>
-        <td><%= link_to booking.toilet.title, toilet_path(booking.toilet) %></td>
-        <td><%= booking.toilet.address %></td>
-        <td><%= booking.status%></td>
-      </tr>
-    <% end %>
-  </table>
+<div class="container pt-5">
+  <h1>'Business' Schedule 🚽</h1>
+  <div class="container p-5">
+    <table class="table table-striped table-primary table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Time:</th>
+          <th scope="col">Toilet:</th>
+          <th scope="col">Address:</th>
+          <th scope="col">Status:</th>
+        </tr>
+      </thead>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td><%= booking.date&.strftime("%b %e, %l:%M %p") %></td>
+          <td><%= link_to booking.toilet.title, toilet_path(booking.toilet) %></td>
+          <td><%= booking.toilet.address %></td>
+          <td><%= booking.status%></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>
