@@ -7,6 +7,7 @@
         <%= f.input :description, placeholder: 'e.g. This beautiful toilet in the center of Harajuku. Take a quick break from shopping to take care of business!' %>
         <%= f.input :address, placeholder: 'e.g. 1-23-4, Jingu-mae, Shibuya' %>
         <%= f.input :price, placeholder: 'e.g. 500', input_html: {step: 100, min: 100} %>
+        <%= f.input :rating, collection: [1,2,3,4,5], include_blank: false, include_hidden: false %>
         <%= f.input :category, collection: ["Japanese Classic (Washiki)", "Outhouse", "Japanese Standard (Bidet + Washlet)", "Japanese Standard Deluxe (++ Heated Seat)", "American Standard", "Luxury (24 CAROT GOLD)", "Urinal"], include_blank: false, include_hidden: false %>
         <%= f.input :photo, as: :file %>
         <div class="submit-btn" style="text-align: center;">

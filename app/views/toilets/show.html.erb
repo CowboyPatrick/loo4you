@@ -10,7 +10,7 @@
       <h1><%= @toilet.title  %></h1>
       <span>
         <p>Category: <%= @toilet.category %></p>
-        <p>Rating: ⭐️⭐️⭐️⭐️</p>
+        <p>Rating:<%= '⭐️'*@toilet.rating%> </p>
         <p>Address: <%= @toilet.address%></p>
       </span>
     </row>
@@ -22,7 +22,7 @@
         <%= f.input :date, html5: true,
                            input_html: {
                              min: Date.today,
-                             value: DateTime.now.strftime('%Y-%m-%dT%H:%M')
+                             value: DateTime.now.in_time_zone("Asia/Tokyo").strftime('%Y-%m-%dT%H:%M')
                            } %>
         <%= f.button :submit, "Book an experience 🚽", class: "btn btn-pink" %>
       <% end %>

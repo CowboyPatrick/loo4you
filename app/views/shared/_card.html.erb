@@ -4,7 +4,7 @@
       <%= link_to toilet_path(toilet.id) do %>
         <%=toilet.title%>
         <br>
-        <p>⭐️⭐️⭐️⭐️</p>
+        <p><%= '⭐️'*toilet.rating%></p>
       <%end%>
     </div>
   <%end%>
