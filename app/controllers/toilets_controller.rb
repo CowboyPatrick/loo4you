@@ -17,7 +17,8 @@ class ToiletsController < ApplicationController
       {
         lat: toilet.latitude,
         lng: toilet.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { toilet: toilet })
+        infoWindow: render_to_string(partial: "info_window", locals: { toilet: toilet }),
+        image_url: helpers.image_url('toiletbowl.png')
       }
     end
   end
