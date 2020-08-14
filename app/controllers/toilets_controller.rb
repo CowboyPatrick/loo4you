@@ -24,7 +24,7 @@ class ToiletsController < ApplicationController
 
   def show
     if params[:lat].present?
-      @toilet = Toilet.near([params[:lat], params[:lon]], 6)[0]
+      @toilet = Toilet.near([params[:lat], params[:lon]])[0]
     else
       @toilet = Toilet.find(params[:id])
     end
