@@ -6,7 +6,7 @@
     <div>
       <h2><%= toilet.title %></h2>
       <p>Category: <%=  toilet.category %></p>
-      <p><%= "⭐️"*rand(1..5) %></p>
+      <p><%= "⭐️"*toilet.rating %></p>
       <!-- <p>Toilet description with <strong>relevant info</strong> only.</p> -->
       <h2 class="card-toilet-pricing">¥<%= toilet.price.to_i%></h2>
     </div>
