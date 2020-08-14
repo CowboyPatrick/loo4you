@@ -15,7 +15,7 @@
       <% @bookings.each do |booking| %>
         <tr>
           <th scope="row"><%= counter += 1 %></th>
-          <td><%= booking.toilet.description %></td>
+          <td><%= booking.toilet.title %></td>
           <td><%= booking.toilet.address %></td>
           <td class="d-flex">
             <% if booking.status == "PENDING" %>
